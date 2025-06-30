@@ -1,8 +1,17 @@
+'use client';
+
 import { Bio } from "@/data/constants";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
+  const getLinkHref = (baseHref: string) => {
+    return pathname === "/" ? baseHref : `/${baseHref}`;
+  };
+
   return (
     <footer className="w-full bg-transparent dark:bg-transparent light:bg-gradient-to-t from-secondary to-transparent py-8">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20 flex flex-col items-center gap-6">
@@ -10,11 +19,11 @@ const Footer = () => {
           {Bio.name}
         </h1>
         <nav className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base">
-          <Link href="#about" className="text-foreground hover:text-primary transition-colors nav-link-hover">About</Link>
-          <Link href="#skills" className="text-foreground hover:text-primary transition-colors nav-link-hover">Skills</Link>
-          <Link href="#experience" className="text-foreground hover:text-primary transition-colors nav-link-hover">Experience</Link>
-          <Link href="#projects" className="text-foreground hover:text-primary transition-colors nav-link-hover">Projects</Link>
-          <Link href="#education" className="text-foreground hover:text-primary transition-colors nav-link-hover">Education</Link>
+          <Link href={getLinkHref("#about")} className="text-foreground hover:text-primary transition-colors nav-link-hover">About</Link>
+          <Link href={getLinkHref("#skills")} className="text-foreground hover:text-primary transition-colors nav-link-hover">Skills</Link>
+          <Link href={getLinkHref("#experience")} className="text-foreground hover:text-primary transition-colors nav-link-hover">Experience</Link>
+          <Link href={getLinkHref("#projects")} className="text-foreground hover:text-primary transition-colors nav-link-hover">Projects</Link>
+          <Link href={getLinkHref("#education")} className="text-foreground hover:text-primary transition-colors nav-link-hover">Education</Link>
         </nav>
         <div className="flex gap-4">
           <Link href={Bio.facebook} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-transform hover:scale-110">

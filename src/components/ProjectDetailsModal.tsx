@@ -42,8 +42,8 @@ const ProjectDetailsModal = ({ project, onClose }: ProjectDetailsModalProps) => 
                   <X className="h-5 w-5" />
               </Button>
               <ScrollArea className="max-h-[90vh]">
-                <div className="grid lg:grid-cols-2">
-                  <div className="relative h-64 lg:h-auto min-h-[300px]">
+                <div className="grid md:grid-cols-2">
+                  <div className="relative h-56 md:h-auto">
                     <Image
                       src={project.image || 'https://placehold.co/600x400.png'}
                       alt={project.title}
@@ -52,8 +52,8 @@ const ProjectDetailsModal = ({ project, onClose }: ProjectDetailsModalProps) => 
                       data-ai-hint="abstract technology"
                     />
                   </div>
-                  <div className="p-6 md:p-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-primary">{project.title}</h2>
+                  <div className="p-4 sm:p-6 md:p-8">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">{project.title}</h2>
                     <p className="text-sm text-muted-foreground mt-1">{project.date}</p>
                     
                     <div className="flex flex-wrap gap-2 my-4">

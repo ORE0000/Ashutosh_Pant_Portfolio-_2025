@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "./ui/button";
 import { Bio } from "@/data/constants";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -52,20 +53,25 @@ const mobileMenuItemVariants = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const getLinkHref = (baseHref: string) => {
+    return pathname === "/" ? baseHref : `/${baseHref}`;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
         <div className="flex items-center justify-between h-16">
-          <Link href="#home" className="text-2xl font-bold gradient-text animated-gradient-text">
+          <Link href="/" className="text-2xl font-bold gradient-text animated-gradient-text">
             Ashutosh Pant
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground hover:text-primary transition-colors nav-link-hover">
+              <Link key={link.href} href={getLinkHref(link.href)} className="text-sm font-medium text-foreground hover:text-primary transition-colors nav-link-hover">
                   {link.label}
               </Link>
             ))}
@@ -94,7 +100,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex justify-center pt-20 md:hidden"
+            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex flex-col justify-start items-center pt-20 px-4 md:hidden"
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -112,9 +118,9 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <motion.div key={link.href} variants={mobileMenuItemVariants}>
                   <Link
-                    href={link.href}
+                    href={getLinkHref(link.href)}
                     onClick={toggleMenu}
-                    className="text-xl font-medium hover:text-primary transition-colors"
+                    className="text-lg font-medium hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
