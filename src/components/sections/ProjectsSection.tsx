@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -102,12 +103,15 @@ const ProjectsSection = () => {
         </motion.div>
 
         {filteredProjects.length > 6 && (
-          <Button
+           <Button
             onClick={() => setShowAll(!showAll)}
-            variant="outline"
-            className="mt-8 rounded-full font-semibold px-6 py-3"
+            size="lg"
+            className="mt-8 font-semibold text-white bg-gradient-to-r from-primary via-purple-600 to-accent hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-primary/40 rounded-full px-8 py-3 text-base group relative overflow-hidden"
           >
-            {showAll ? 'Show Less' : 'Show More'}
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-full"></div>
+            <span className="relative flex items-center">
+              {showAll ? 'Show Less' : 'Show More'}
+            </span>
           </Button>
         )}
       </section>

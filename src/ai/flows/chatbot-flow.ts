@@ -39,9 +39,9 @@ function getAnswerFromBio(query: string): string {
         return `Ashutosh has a diverse skill set across different domains. Here's a summary:\n\n${skillSummary}\n\nYou can find more details in the Skills section.`;
     }
 
-    if (q.includes('project')) {
-        const projectTitles = Bio.projects.map(p => p.title).slice(0, 5).join(', ');
-        return `He has worked on several projects, including: ${projectTitles}, and more. Check out the Projects section for more details on each!`;
+    if (q.includes('project') || q.includes('visual')) {
+        const dataProjects = Bio.projects.filter(p => p.category === 'data analyst').map(p => p.title).join(', ');
+        return `Ashutosh's key projects focus on data analysis, including: ${dataProjects}. You can explore these in detail in the Projects section and see the interactive dashboards on the Visuals page.`;
     }
 
     if (q.includes('experience') || q.includes('journey')) {
@@ -71,11 +71,11 @@ function getAnswerFromBio(query: string): string {
     }
 
     if (q.includes('long-term career goals') || q.includes('aspirations')) {
-        return "Ashutosh's long-term career goal is to become a data analyst. He is passionate about uncovering insights from data to drive business decisions and is focused on developing his skills in data visualization, statistical analysis, and machine learning to achieve this aspiration.";
+        return "Ashutosh is a passionate data analyst. His career is focused on leveraging data to drive business decisions through insightful visualization, statistical analysis, and machine learning. He aims to help organizations make smarter, data-informed choices.";
     }
 
     if (q.includes('what is this portfolio about')) {
-        return "This portfolio is a showcase of Ashutosh Pant's skills, experience, and projects as a full-stack developer and data analyst. It's designed to give you a comprehensive overview of his capabilities and the work he's passionate about.";
+        return "This portfolio showcases Ashutosh Pant's expertise as a data analyst. It highlights his skills in data visualization, market analysis, and transforming complex data into actionable insights. You'll find detailed case studies of his projects in the Visuals section.";
     }
 
     // A more generic fallback.
@@ -110,10 +110,10 @@ const chatbotFlow = ai.defineFlow(
     });
 
     const prompt = `You are a helpful and friendly AI assistant for Ashutosh Pant's portfolio website.
-Your goal is to answer questions about Ashutosh's skills, experience, projects, education, and career.
+Your goal is to answer questions about Ashutosh's skills, experience, projects, education, and career, with a focus on his data analysis work.
 You MUST use ONLY the information provided in the following JSON data to answer the user's questions.
 Do not make up any information. If the answer is not in the provided data, say that you don't have that information.
-Keep your answers concise, professional, and friendly.
+Keep your answers concise, professional, and friendly. When asked about projects, direct users to the 'Visuals' page.
 
 Here is the information about Ashutosh Pant:
 ${bioContext}
@@ -122,7 +122,7 @@ User's question: "${query}"
 `;
 
     const {output} = await ai.generate({
-      prompt: prompt,
+    prompt: prompt,
     });
     
     return output || "I'm sorry, I couldn't generate a response. Please try again.";

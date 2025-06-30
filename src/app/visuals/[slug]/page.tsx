@@ -23,6 +23,10 @@ const WattpadAnalysisChart = dynamic(() => import('@/components/charts/WattpadAn
   ssr: false,
   loading: () => <div className="w-full h-96 flex items-center justify-center bg-card rounded-lg"><p>Loading chart...</p></div>,
 });
+const AirbnbAnalysisChart = dynamic(() => import('@/components/charts/AirbnbAnalysisChart'), {
+  ssr: false,
+  loading: () => <div className="w-full h-96 flex items-center justify-center bg-card rounded-lg"><p>Loading chart...</p></div>,
+});
 
 
 // A map to associate component names from constants.ts with actual imported components
@@ -30,19 +34,19 @@ const componentMap = {
   CustomerSalesChart,
   PratilipiMarketAnalysisChart,
   WattpadAnalysisChart,
+  AirbnbAnalysisChart,
 };
 
 
 export default function VisualDetailPage() {
-  const params = useParams();
-  const slug = params.slug as string;
-  const visual = visuals.find((v) => v.slug === slug);
+  const params = useParams<{ slug: string }>();
+  const visual = visuals.find((v) => v.slug === params.slug);
 
   if (!visual) {
     notFound();
   }
 
-  const InteractiveComponent = visual.component ? componentMap[visual.component] : null;
+  const InteractiveComponent = visual.component ? componentMap[visual.component as keyof typeof componentMap] : null;
 
   return (
     <div className="min-h-screen bg-background text-foreground py-12 md:py-20 px-4 sm:px-6 md:px-10 lg:px-20">

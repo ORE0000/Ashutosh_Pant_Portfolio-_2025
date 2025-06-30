@@ -57,7 +57,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative z-0 flex flex-col items-center justify-center gap-8 md:gap-12">
+    <section id="contact" className="flex flex-col items-center justify-center gap-8 md:gap-12 py-16 md:py-24">
       <div className="text-center animate-fadeIn max-w-2xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold gradient-text animated-gradient-text">
             Contact Me
@@ -73,9 +73,9 @@ const ContactSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className="w-full max-w-lg animated-rainbow-border"
+        className="w-full max-w-lg animated-rainbow-border !rounded-[2.5rem]"
       >
-        <div className="relative z-10 bg-card rounded-3xl p-6 md:p-8">
+        <div className="relative z-10 bg-card rounded-[2.5rem] p-6 md:p-8">
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
             <Input
               type="email"

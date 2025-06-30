@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -7,6 +8,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
+  ChartLegend,
 } from '@/components/ui/chart';
 import {
   Card,
@@ -45,9 +47,6 @@ const chartConfigCategory: ChartConfig = {
 export default function CustomerSalesChart() {
   const [view, setView] = useState<'quarterly' | 'category'>('quarterly');
 
-  const data = view === 'quarterly' ? quarterlySalesData : categorySalesData;
-  const config = view === 'quarterly' ? chartConfigQuarterly : chartConfigCategory;
-
   return (
     <Card className="w-full rounded-2xl">
       <CardHeader>
@@ -77,11 +76,12 @@ export default function CustomerSalesChart() {
             </div>
 
             <div className="w-full md:w-3/4">
-                <ChartContainer config={config} className="min-h-[300px] w-full">
-                  <BarChart accessibilityLayer data={data}>
+              {view === 'quarterly' ? (
+                <ChartContainer config={chartConfigQuarterly} className="min-h-[300px] w-full">
+                  <BarChart data={quarterlySalesData}>
                     <CartesianGrid vertical={false} />
                     <XAxis
-                      dataKey={view === 'quarterly' ? 'quarter' : 'category'}
+                      dataKey="quarter"
                       tickLine={false}
                       tickMargin={10}
                       axisLine={false}
@@ -90,25 +90,40 @@ export default function CustomerSalesChart() {
                         tickLine={false}
                         axisLine={false}
                         tickMargin={10}
-                        tickFormatter={(value) => `$${value}K`}
                      />
                     <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
-                    {view === 'quarterly' ? (
-                        <>
-                            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4}>
-                                <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
-                            </Bar>
-                            <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4}>
-                                 <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
-                            </Bar>
-                        </>
-                    ) : (
-                        <Bar dataKey="sales" fill="var(--color-sales)" radius={4}>
-                            <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
-                        </Bar>
-                    )}
+                    <ChartLegend />
+                    <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4}>
+                        <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
+                    </Bar>
+                    <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4}>
+                          <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
+                    </Bar>
                   </BarChart>
                 </ChartContainer>
+              ) : (
+                <ChartContainer config={chartConfigCategory} className="min-h-[300px] w-full">
+                  <BarChart data={categorySalesData}>
+                    <CartesianGrid vertical={false} />
+                    <XAxis
+                      dataKey="category"
+                      tickLine={false}
+                      tickMargin={10}
+                      axisLine={false}
+                    />
+                     <YAxis
+                        tickLine={false}
+                        axisLine={false}
+                        tickMargin={10}
+                     />
+                    <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
+                    <ChartLegend />
+                    <Bar dataKey="sales" fill="var(--color-sales)" radius={4}>
+                        <LabelList position="top" offset={12} className="fill-foreground" fontSize={12} />
+                    </Bar>
+                  </BarChart>
+                </ChartContainer>
+              )}
             </div>
         </div>
       </CardContent>

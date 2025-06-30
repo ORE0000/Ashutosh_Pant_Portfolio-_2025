@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,32 +20,31 @@
 
 @layer base {
   :root {
-    --background: 240 30% 96%;
-    --foreground: 0 0% 6.7%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 6.7%;
-    --card-light: 210 17% 98%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6.7%;
-    --primary: 262 84% 48%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 94.1%;
-    --secondary-foreground: 0 0% 6.7%;
-    --muted: 0 0% 94.1%;
-    --muted-foreground: 220 2% 29%;
-    --accent: 262 84% 58%;
+    --background: 240 10% 3.9%;
+    --foreground: 210 14% 96%;
+    --card: 240 14% 11%;
+    --card-foreground: 210 14% 96%;
+    --card-light: 240 15% 12%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 210 14% 96%;
+    --primary: 262 76% 62%;
+    --primary-foreground: 0 0% 6.7%;
+    --secondary: 231 21% 13%;
+    --secondary-foreground: 210 14% 96%;
+    --muted: 231 21% 13%;
+    --muted-foreground: 213 4% 70%;
+    --accent: 262 100% 77%;
     --accent-foreground: 0 0% 6.7%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 85%;
-    --input: 0 0% 89.8%;
-    --ring: 262 84% 48%;
-    --radius: 0.5rem;
-    --chart-1: 262 84% 58%;
-    --chart-2: 220 74% 65%;
-    --chart-3: 170 74% 60%;
-    --chart-4: 290 70% 68%;
-    --chart-5: 240 60% 70%;
+    --border: 240 4% 15%;
+    --input: 240 4% 15%;
+    --ring: 262 76% 62%;
+    --chart-1: 262 76% 62%;
+    --chart-2: 220 70% 75%;
+    --chart-3: 170 70% 65%;
+    --chart-4: 290 70% 75%;
+    --chart-5: 240 60% 75%;
   }
  
   .dark {
@@ -97,6 +97,15 @@
       to {
           --angle: 360deg;
       }
+  }
+
+  @keyframes background-glow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
   }
 
   * {
@@ -169,7 +178,7 @@
   }
 
   .animated-rainbow-border {
-    @apply relative overflow-hidden rounded-3xl p-1;
+    @apply relative overflow-hidden rounded-[2.5rem] p-1;
   }
 
   .animated-rainbow-border::before {
@@ -193,6 +202,19 @@
   }
   .input-rainbow-focus-secondary:focus-visible {
     background: linear-gradient(hsl(var(--secondary)), hsl(var(--secondary))) padding-box, conic-gradient(from var(--angle), #A259FF, #5F35F3, #43e97b, #A259FF) border-box;
+  }
+
+  .section-glow {
+    @apply relative overflow-hidden isolate;
+  }
+  .section-glow::before {
+    content: '';
+    @apply absolute -inset-4 z-[-1];
+    background-image:
+      radial-gradient(ellipse at 20% 20%, hsl(var(--primary) / 0.15), transparent 40%),
+      radial-gradient(ellipse at 80% 70%, hsl(var(--chart-3) / 0.15), transparent 40%);
+    filter: blur(100px);
+    animation: background-glow 4s ease-in-out infinite;
   }
 }
 

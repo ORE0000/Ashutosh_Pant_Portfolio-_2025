@@ -90,7 +90,7 @@ export default function PratilipiMarketAnalysisChart() {
                     </CardHeader>
                     <CardContent>
                         <ChartContainer config={chartConfig} className="w-full h-[300px]">
-                            <BarChart data={revenueBySourceData} layout="vertical" margin={{ left: 100 }}>
+                            <BarChart data={revenueBySourceData} layout="vertical" margin={{ left: 100, bottom: 20 }}>
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis type="number" unit="M" />
                                 <YAxis type="category" dataKey="source" width={100} tick={{ fontSize: 12 }} />
@@ -110,10 +110,10 @@ export default function PratilipiMarketAnalysisChart() {
                         <ChartContainer config={chartConfig} className="w-full h-[300px]">
                             <PieChart>
                                 <ChartTooltip content={<ChartTooltipContent nameKey="name" />} />
-                                <Pie data={revenuePieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
+                                <Pie data={revenuePieData} dataKey="value" nameKey="name" cx="50%" cy="45%" outerRadius={80} label>
                                     {revenuePieData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.fill} />)}
                                 </Pie>
-                                <ChartLegend content={<ChartLegendContent nameKey="name" />} />
+                                <ChartLegend content={<ChartLegendContent nameKey="name" className="flex-wrap" />} />
                             </PieChart>
                         </ChartContainer>
                     </CardContent>

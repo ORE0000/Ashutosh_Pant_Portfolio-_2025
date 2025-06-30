@@ -27,7 +27,7 @@ longDescription: string;
 iconName: string; // Will map to Lucide icon
 image: string;
 hint: string;
-component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart';
+component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart' | 'AirbnbAnalysisChart';
 tools: string[];
 achievements: string[];
 };
@@ -40,12 +40,52 @@ description:
   "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
 github: "https://github.com/ORE0000",
 resume:
-  "https://drive.google.com/file/d/1orr5pludUGb-ljvu6xoWx1XXN04S64N4/view?usp=sharing?usp=drive_link",
+  "https://drive.google.com/file/d/1c-9FrU_7_jQetJElbvPNRDY8z7ZZpgyl/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ashutosh-pant1/",
 twitter: "https://x.com/ASHUTOSHPANT19",
 insta: "https://www.instagram.com/oreeoo._______/",
 facebook: "https://www.facebook.com/Ashutoshpant.007",
 skills: [
+  {
+    title: "Data & Analytics",
+    skills: [
+      {
+        name: "Excel",
+        image:
+          "https://img.icons8.com/?size=100&id=117561&format=png&color=000000",
+      },
+      {
+        name: "Google Sheets",
+        image:
+          "https://img.icons8.com/?size=100&id=30461&format=png&color=000000",
+      },
+      {
+        name: "MySQL",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+      },
+      {
+        name: "Python",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "Numpy",
+        image:
+          "https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000",
+      },
+      {
+        name: "Tableau",
+        image:
+          "https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000",
+      },
+      {
+        name: "Power BI",
+        image:
+          "https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000",
+      },
+    ],
+  },
   {
     title: "Frontend",
     skills: [
@@ -140,46 +180,6 @@ skills: [
         name: "Prometheus",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png",
-      },
-    ],
-  },
-  {
-    title: "Data & Analytics",
-    skills: [
-      {
-        name: "Excel",
-        image:
-          "https://img.icons8.com/?size=100&id=117561&format=png&color=000000",
-      },
-      {
-        name: "Google Sheets",
-        image:
-          "https://img.icons8.com/?size=100&id=30461&format=png&color=000000",
-      },
-      {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "Python",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      },
-      {
-        name: "Numpy",
-        image:
-          "https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000",
-      },
-      {
-        name: "Tableau",
-        image:
-          "https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000",
-      },
-      {
-        name: "Power BI",
-        image:
-          "https://img.icons8.com/?size=100&id=qYfwpsRXEcpc&format=png&color=000000",
       },
     ],
   },
@@ -382,6 +382,17 @@ projects: [
     webapp: "/visuals/wattpad-author-analysis",
   },
   {
+    id: 14,
+    title: "Airbnb Market Analysis",
+    date: "May 2025",
+    description: "Conducted an in-depth analysis of Airbnb listings, utilizing SQL for data extraction and Python for cleaning. Designed an interactive Tableau dashboard to visualize key metrics like price distribution, occupancy rates, and host activity, enhancing data-driven decision-making.",
+    image: "https://placehold.co/600x400.png",
+    tags: ['Tableau', 'SQL', 'Excel', 'Python', 'Pandas', 'NumPy'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/airbnb-market-analysis",
+  },
+  {
     id: 11,
     title: "MY-first-Portfolio",
     date: "July 2024 - August 2024",
@@ -548,6 +559,23 @@ export const visuals: Visual[] = [
   ]
 },
 {
+  slug: 'airbnb-market-analysis',
+  title: 'Airbnb Market Analysis',
+  shortDescription: 'A comprehensive analysis of Airbnb listings, pricing, and availability in a major metropolitan area.',
+  longDescription: 'Conducted an in-depth analysis of Airbnb listings, utilizing SQL for data extraction and Python (Pandas, NumPy) for data cleaning and transformation. I designed an interactive Tableau dashboard to visualize key metrics such as price distribution, occupancy rates, and host activity, which enhanced data-driven decision-making. A significant part of this project was implementing geospatial analysis to identify pricing trends across different cities and neighborhoods. Additionally, I automated data preprocessing in Excel, reducing manual efforts by 40% and improving overall data accuracy.',
+  iconName: 'MapPinned',
+  image: 'https://placehold.co/800x600.png',
+  hint: 'map data',
+  component: 'AirbnbAnalysisChart',
+  tools: ['Tableau', 'SQL', 'Excel', 'Python', 'Pandas', 'NumPy'],
+  achievements: [
+      'Designed an interactive Tableau dashboard to visualize key metrics.',
+      'Implemented geospatial analysis to identify pricing trends.',
+      'Automated data preprocessing, reducing manual efforts by 40%.',
+      'Used advanced SQL and Python for data extraction and cleaning.'
+  ]
+},
+{
   slug: 'power-bi-sales-dashboard',
   title: 'Power BI Sales Dashboard',
   shortDescription: 'An interactive dashboard analyzing quarterly sales performance across multiple regions and product categories.',
@@ -594,22 +622,6 @@ export const visuals: Visual[] = [
       'Crafted clear visuals to communicate insights effectively.',
       'Applied statistical methods to interpret data with high accuracy.',
       'Engaged in real-world projects to apply skills to practical datasets.'
-  ]
-},
- {
-  slug: 'airbnb-market-analysis',
-  title: 'Airbnb Market Analysis',
-  shortDescription: 'A comprehensive analysis of Airbnb listings, pricing, and availability in a major metropolitan area.',
-  longDescription: 'Conducted an in-depth analysis of Airbnb listings, utilizing SQL for data extraction and Python (Pandas, NumPy) for data cleaning and transformation. I designed an interactive Tableau dashboard to visualize key metrics such as price distribution, occupancy rates, and host activity, which enhanced data-driven decision-making. A significant part of this project was implementing geospatial analysis to identify pricing trends across different cities and neighborhoods. Additionally, I automated data preprocessing in Excel, reducing manual efforts by 40% and improving overall data accuracy.',
-  iconName: 'MapPinned',
-  image: 'https://placehold.co/800x600.png',
-  hint: 'map data',
-  tools: ['Tableau', 'SQL', 'Excel', 'Python', 'Pandas', 'NumPy'],
-  achievements: [
-      'Designed an interactive Tableau dashboard to visualize key metrics.',
-      'Implemented geospatial analysis to identify pricing trends.',
-      'Automated data preprocessing, reducing manual efforts by 40%.',
-      'Used advanced SQL and Python for data extraction and cleaning.'
   ]
 },
 ];

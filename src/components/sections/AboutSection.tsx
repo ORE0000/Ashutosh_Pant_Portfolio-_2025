@@ -6,14 +6,14 @@ import { Eye } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative w-full overflow-hidden py-20 md:py-28 lg:py-40">
+    <section id="about" className="section-glow relative w-full overflow-hidden py-20 md:py-28 lg:py-40">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       <div className="relative max-w-screen-md mx-auto px-4 sm:px-8 md:px-12 lg:px-20 z-10">
         <div className="animated-rainbow-border">
           <div className="relative z-10 bg-card rounded-3xl p-6 md:p-10 text-center animate-fadeIn">
             <div className="flex flex-col items-center gap-6">
               <Image
-                src="/images/HeroImage.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/aetherfolio-f2f25.appspot.com/o/images%2Fashutosh-pant.png?alt=media&token=8d233157-b184-46c5-9f22-3957591e1d24"
                 alt="Ashutosh Pant"
                 width={150}
                 height={150}
