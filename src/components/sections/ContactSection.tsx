@@ -83,7 +83,7 @@ const ContactSection = () => {
               placeholder="Your Email"
               required
               aria-label="Your Email"
-              className="bg-background input-rainbow-focus"
+              className="bg-background input-rainbow-focus rounded-full"
             />
             <Input
               type="text"
@@ -91,7 +91,7 @@ const ContactSection = () => {
               placeholder="Your Name"
               required
               aria-label="Your Name"
-              className="bg-background input-rainbow-focus"
+              className="bg-background input-rainbow-focus rounded-full"
             />
             <Input
               type="text"
@@ -99,7 +99,7 @@ const ContactSection = () => {
               placeholder="Subject"
               required
               aria-label="Subject"
-              className="bg-background input-rainbow-focus"
+              className="bg-background input-rainbow-focus rounded-full"
             />
             <Textarea
               name="message"
@@ -107,7 +107,7 @@ const ContactSection = () => {
               required
               aria-label="Message"
               rows={4}
-              className="bg-background input-rainbow-focus"
+              className="bg-background input-rainbow-focus rounded-2xl"
             />
             <Button type="submit" disabled={isSending} className="group relative overflow-hidden bg-gradient-to-r from-primary via-purple-600 to-accent text-primary-foreground font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/40 rounded-full">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-full"></div>

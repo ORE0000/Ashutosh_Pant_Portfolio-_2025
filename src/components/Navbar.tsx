@@ -79,8 +79,8 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <a href={Bio.github} target="_blank" rel="noopener noreferrer" className="hidden md:inline-block group">
-              <div className="animated-rainbow-border !rounded-lg">
-                <div className="relative z-10 bg-background rounded-md px-4 py-2 flex items-center gap-2 text-sm font-medium text-foreground group-hover:bg-transparent group-hover:text-white transition-all duration-200">
+              <div className="animated-rainbow-border !rounded-full">
+                <div className="relative z-10 bg-background rounded-full px-4 py-2 flex items-center gap-2 text-sm font-medium text-foreground group-hover:bg-transparent group-hover:text-white transition-all duration-200">
                     <Github size={16} />
                     Github Profile
                 </div>
@@ -128,8 +128,8 @@ const Navbar = () => {
               ))}
               <motion.div variants={mobileMenuItemVariants} className="mt-4">
                 <a href={Bio.github} target="_blank" rel="noopener noreferrer" className="group w-full max-w-xs" onClick={toggleMenu}>
-                  <div className="animated-rainbow-border !rounded-lg">
-                    <div className="relative z-10 w-full px-4 py-2 bg-background rounded-md flex items-center justify-center gap-2 text-sm font-medium text-foreground group-hover:bg-transparent group-hover:text-white transition-all duration-200">
+                  <div className="animated-rainbow-border !rounded-full">
+                    <div className="relative z-10 w-full px-4 py-2 bg-background rounded-full flex items-center justify-center gap-2 text-sm font-medium text-foreground group-hover:bg-transparent group-hover:text-white transition-all duration-200">
                         <Github size={16} />
                         Github Profile
                     </div>
