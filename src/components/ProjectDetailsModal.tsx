@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Github, Link as LinkIcon, X } from "lucide-react";
+import { Github, Link as LinkIcon, X, Eye } from "lucide-react";
 import { ScrollArea } from "./ui/scroll-area";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -85,14 +85,21 @@ const ProjectDetailsModal = ({ project, onClose }: ProjectDetailsModalProps) => 
                     )}
                     
                     <div className="flex flex-wrap gap-4 mt-8">
-                      <Button asChild variant="outline" className="border-primary text-primary hover:text-primary hover:bg-primary/10">
+                      <Button asChild variant="outline" className="border-primary text-primary hover:text-primary hover:bg-primary/10 rounded-full">
                         <Link href={project.github} target="_blank">
                           <Github className="mr-2 h-4 w-4" />
                           View Code
                         </Link>
                       </Button>
-                      {project.webapp && (
-                          <Button asChild className="bg-primary text-primary-foreground hover:bg-accent">
+                      {project.webapp && project.category === 'data analyst' ? (
+                          <Button asChild className="bg-primary text-primary-foreground hover:bg-accent rounded-full">
+                            <Link href={project.webapp}>
+                              <Eye className="mr-2 h-4 w-4" />
+                              View Visual
+                            </Link>
+                          </Button>
+                      ) : project.webapp && (
+                          <Button asChild className="bg-primary text-primary-foreground hover:bg-accent rounded-full">
                             <Link href={project.webapp} target="_blank">
                               <LinkIcon className="mr-2 h-4 w-4" />
                               Live App

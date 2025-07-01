@@ -42,7 +42,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
                     <CardFooter className="p-0 pt-4 mt-auto">
                         <Button
                             onClick={() => onViewDetails(project)}
-                            className="w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                            className="w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
                         >
                             View Details
                         </Button>

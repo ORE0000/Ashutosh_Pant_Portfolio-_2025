@@ -90,7 +90,7 @@ const Chatbot = () => {
                     >
                         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10" onClick={() => setIsOpen(false)} />
                         
-                        <div className="animated-rainbow-border w-full h-full sm:w-[600px] sm:h-[80vh] max-h-[700px]">
+                        <div className="animated-rainbow-border rounded-3xl w-full h-full sm:w-[600px] sm:h-[80vh] max-h-[700px]">
                             <div className="relative z-10 w-full h-full bg-card text-card-foreground rounded-3xl flex flex-col p-4 sm:p-6 overflow-hidden">
                                 
                                 <div className="flex items-center justify-between mb-4 flex-shrink-0">

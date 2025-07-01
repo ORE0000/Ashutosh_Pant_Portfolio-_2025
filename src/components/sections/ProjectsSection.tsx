@@ -11,8 +11,8 @@ import ProjectDetailsModal from "../ProjectDetailsModal";
 
 const projectCategories = [
   { value: 'all', label: 'All' },
-  { value: 'web app', label: "Web App's" },
   { value: 'data analyst', label: 'Data Analyst' },
+  { value: 'web app', label: "Web App's" },
   { value: 'machine learning', label: 'Machine Learning' },
 ];
 

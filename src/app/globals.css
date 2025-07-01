@@ -178,10 +178,22 @@
   }
 
   .animated-rainbow-border {
-    @apply relative overflow-hidden rounded-[2.5rem] p-1;
+    @apply relative p-1;
   }
 
   .animated-rainbow-border::before {
+    content: '';
+    @apply absolute -z-[1];
+    inset: 0;
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), #33a8d9, #e94b63, #43e97b, #33a8d9);
+    animation: rainbow-border-spin 4s linear infinite;
+  }
+
+  .github-button-glow {
+    @apply relative overflow-hidden rounded-full p-1;
+  }
+  .github-button-glow::before {
     content: '';
     @apply absolute -top-1/2 -left-1/2 w-[200%] h-[200%];
     background-image: conic-gradient(
@@ -198,10 +210,10 @@
     animation: rainbow-border-spin 3s linear infinite;
   }
   .input-rainbow-focus:focus-visible {
-    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, conic-gradient(from var(--angle), #A259FF, #5F35F3, #43e97b, #A259FF) border-box;
+    background: linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, conic-gradient(from var(--angle), #33a8d9, #e94b63, #43e97b, #33a8d9) border-box;
   }
   .input-rainbow-focus-secondary:focus-visible {
-    background: linear-gradient(hsl(var(--secondary)), hsl(var(--secondary))) padding-box, conic-gradient(from var(--angle), #A259FF, #5F35F3, #43e97b, #A259FF) border-box;
+    background: linear-gradient(hsl(var(--secondary)), hsl(var(--secondary))) padding-box, conic-gradient(from var(--angle), #33a8d9, #e94b63, #43e97b, #33a8d9) border-box;
   }
 
   .section-glow {

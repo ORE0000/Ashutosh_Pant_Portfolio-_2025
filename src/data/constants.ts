@@ -27,7 +27,7 @@ longDescription: string;
 iconName: string; // Will map to Lucide icon
 image: string;
 hint: string;
-component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart' | 'AirbnbAnalysisChart';
+component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart' | 'AirbnbAnalysisChart' | 'NetflixDashboard';
 tools: string[];
 achievements: string[];
 };
@@ -360,6 +360,17 @@ education: [
 ],
 projects: [
   {
+    id: 15,
+    title: "Netflix Content Analysis Dashboard",
+    date: "July 2025",
+    description: "A comprehensive dashboard analyzing the Netflix content library, inspired by a Tableau visualization.",
+    image: "https://placehold.co/800x600.png",
+    tags: ['Recharts', 'Next.js', 'Tailwind CSS', 'TypeScript'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/netflix-dashboard",
+  },
+  {
     id: 12,
     title: "Pratilipi Market Analysis",
     date: "June 2025",
@@ -391,6 +402,39 @@ projects: [
     category: "data analyst",
     github: "https://github.com/ORE0000",
     webapp: "/visuals/airbnb-market-analysis",
+  },
+  {
+    id: 16,
+    title: "Power BI Sales Dashboard",
+    date: "July 2025",
+    description: "An interactive dashboard analyzing quarterly sales performance across multiple regions and product categories.",
+    image: "https://placehold.co/800x600.png",
+    tags: ['Power BI', 'SQL', 'Python', 'Matplotlib', 'Seaborn'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/power-bi-sales-dashboard",
+  },
+  {
+    id: 17,
+    title: "Tableau Customer Segmentation",
+    date: "June 2025",
+    description: "A storyboard illustrating customer segmentation based on purchasing behavior, demographics, and lifetime value.",
+    image: "https://placehold.co/800x600.png",
+    tags: ['Tableau', 'Excel', 'Data Cleansing', 'Data Segmentation'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/tableau-customer-segmentation",
+  },
+  {
+    id: 18,
+    title: "Python Market Trend Analysis",
+    date: "May 2025",
+    description: "Visualizations created with Matplotlib and Seaborn to identify and forecast market trends from historical data.",
+    image: "https://placehold.co/800x600.png",
+    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Jupyter'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/python-market-trend-analysis",
   },
   {
     id: 11,
@@ -524,6 +568,23 @@ projects: [
 
 export const visuals: Visual[] = [
 {
+  slug: 'netflix-dashboard',
+  title: 'Netflix Content Analysis Dashboard',
+  shortDescription: 'A comprehensive dashboard analyzing the Netflix content library, inspired by a Tableau visualization.',
+  longDescription: 'This dashboard provides a deep dive into the Netflix content library. It includes breakdowns by country, rating, genre, and type (Movie vs. TV Show), as well as trends over time. This project showcases advanced data visualization techniques using Recharts within a Next.js application, replicating a complex Tableau dashboard.',
+  iconName: 'Film',
+  image: 'https://placehold.co/800x600.png',
+  hint: 'netflix dashboard analytics',
+  component: 'NetflixDashboard',
+  tools: ['Recharts', 'Next.js', 'Tailwind CSS', 'TypeScript'],
+  achievements: [
+    'Replicated a complex Tableau dashboard in a web environment.',
+    'Visualized multiple data facets including geospatial, categorical, and time-series data.',
+    'Implemented a responsive grid layout for a multi-chart view.',
+    'Utilized custom styling to match a specific design theme.'
+  ]
+},
+{
   slug: 'pratilipi-market-analysis',
   title: 'Pratilipi Market Analysis',
   shortDescription: 'An end-to-end market research and strategic analysis of Pratilipi, a digital storytelling platform.',
@@ -625,3 +686,5 @@ export const visuals: Visual[] = [
   ]
 },
 ];
+
+  

@@ -27,6 +27,10 @@ const AirbnbAnalysisChart = dynamic(() => import('@/components/charts/AirbnbAnal
   ssr: false,
   loading: () => <div className="w-full h-96 flex items-center justify-center bg-card rounded-lg"><p>Loading chart...</p></div>,
 });
+const NetflixDashboard = dynamic(() => import('@/components/charts/NetflixDashboard'), {
+    ssr: false,
+    loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
 
 
 // A map to associate component names from constants.ts with actual imported components
@@ -35,6 +39,7 @@ const componentMap = {
   PratilipiMarketAnalysisChart,
   WattpadAnalysisChart,
   AirbnbAnalysisChart,
+  NetflixDashboard,
 };
 
 
