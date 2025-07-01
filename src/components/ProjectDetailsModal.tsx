@@ -36,7 +36,7 @@ const ProjectDetailsModal = ({ project, onClose }: ProjectDetailsModalProps) => 
           className="w-full max-w-4xl m-4"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="animated-rainbow-border">
+          <div className="animated-rainbow-border rounded-3xl">
             <div className="relative z-10 w-full bg-card text-card-foreground rounded-3xl overflow-hidden">
               <Button variant="ghost" size="icon" onClick={onClose} className="absolute top-4 right-4 z-20 rounded-full">
                   <X className="h-5 w-5" />

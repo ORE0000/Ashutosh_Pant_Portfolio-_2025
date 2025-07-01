@@ -1,3 +1,4 @@
+
 'use client';
 
 import { visuals } from '@/data/constants';
@@ -33,16 +34,6 @@ const NetflixDashboard = dynamic(() => import('@/components/charts/NetflixDashbo
 });
 
 
-// A map to associate component names from constants.ts with actual imported components
-const componentMap = {
-  CustomerSalesChart,
-  PratilipiMarketAnalysisChart,
-  WattpadAnalysisChart,
-  AirbnbAnalysisChart,
-  NetflixDashboard,
-};
-
-
 export default function VisualDetailPage() {
   const params = useParams<{ slug: string }>();
   const visual = visuals.find((v) => v.slug === params.slug);
@@ -50,8 +41,6 @@ export default function VisualDetailPage() {
   if (!visual) {
     notFound();
   }
-
-  const InteractiveComponent = visual.component ? componentMap[visual.component as keyof typeof componentMap] : null;
 
   return (
     <div className="min-h-screen bg-background text-foreground py-12 md:py-20 px-4 sm:px-6 md:px-10 lg:px-20">
@@ -111,9 +100,13 @@ export default function VisualDetailPage() {
             </div>
         </div>
 
-        {InteractiveComponent && (
+        {visual.component && (
             <div className="mt-12">
-                <InteractiveComponent />
+                {visual.component === 'CustomerSalesChart' && <CustomerSalesChart />}
+                {visual.component === 'PratilipiMarketAnalysisChart' && <PratilipiMarketAnalysisChart />}
+                {visual.component === 'WattpadAnalysisChart' && <WattpadAnalysisChart />}
+                {visual.component === 'AirbnbAnalysisChart' && <AirbnbAnalysisChart />}
+                {visual.component === 'NetflixDashboard' && <NetflixDashboard />}
             </div>
         )}
       </div>
