@@ -40,7 +40,7 @@ description:
   "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
 github: "https://github.com/ORE0000",
 resume:
-  "https://drive.google.com/file/d/1c-9FrU_7_jQetJElbvPNRDY8z7ZZpgyl/view?usp=sharing",
+  "https://drive.google.com/file/d/1d_RZYwKraTgPuFT4HAMpW-3swEkeRw8p/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ashutosh-pant1/",
 twitter: "https://x.com/ASHUTOSHPANT19",
 insta: "https://www.instagram.com/oreeoo._______/",
