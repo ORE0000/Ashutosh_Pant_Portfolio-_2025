@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import { visuals } from '@/data/constants';
@@ -32,6 +33,18 @@ const NetflixDashboard = dynamic(() => import('@/components/charts/NetflixDashbo
     ssr: false,
     loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
 });
+const SpotifyDashboard = dynamic(() => import('@/components/charts/spotify-music-analytics'), {
+  ssr: false,
+  loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
+const BankLoanAnalyticsDashboard = dynamic(() => import('@/app/visuals/bank-loan-analytics/page'), {
+  ssr: false,
+  loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
+const FitnessDashboard = dynamic(() => import('@/app/visuals/fitness-dashboard/page'), {
+  ssr: false,
+  loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
 
 
 export default function VisualDetailPage() {
@@ -40,6 +53,16 @@ export default function VisualDetailPage() {
 
   if (!visual) {
     notFound();
+  }
+
+  if (visual.component === 'SpotifyDashboard') {
+    return <SpotifyDashboard />;
+  }
+  if (visual.component === 'BankLoanAnalyticsDashboard') {
+    return <BankLoanAnalyticsDashboard />;
+  }
+  if (visual.component === 'FitnessDashboard') {
+    return <FitnessDashboard />;
   }
 
   return (

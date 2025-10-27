@@ -27,9 +27,18 @@ longDescription: string;
 iconName: string; // Will map to Lucide icon
 image: string;
 hint: string;
-component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart' | 'AirbnbAnalysisChart' | 'NetflixDashboard';
+component?: 'CustomerSalesChart' | 'PratilipiMarketAnalysisChart' | 'WattpadAnalysisChart' | 'AirbnbAnalysisChart' | 'NetflixDashboard' | 'SpotifyDashboard' | 'BankLoanAnalyticsDashboard' | 'FitnessDashboard';
 tools: string[];
 achievements: string[];
+};
+
+export type Certificate = {
+id: number;
+title: string;
+issuedBy: string;
+date: string;
+image: string;
+credentialLink: string;
 };
 
 
@@ -276,6 +285,10 @@ experience: [
       "Market Research",
       "Data Scraping",
       "Excel",
+      "Recharts",
+      "Next.js",
+      "Financial Analysis",
+      "Competitor Benchmarking"
     ],
   },
   {
@@ -363,11 +376,44 @@ education: [
 ],
 projects: [
   {
+    id: 27,
+    title: "Bank Loan Analytics Dashboard",
+    date: "2024",
+    description: "This project demonstrates end-to-end data analysis and visualization using SQL Server and Microsoft Power BI. The goal was to analyze a financial institution’s loan dataset to uncover insights into loan performance, borrower behavior, and portfolio health.",
+    image: "https://drive.google.com/uc?id=1C3ZtJwl_y4wPCpi-zHibvZNvtBC0M733",
+    tags: ['SQL Server', 'Power BI', 'DAX', 'Data Modeling'],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/bank-loan-analytics",
+  },
+  {
+    id: 28,
+    title: "Fitness Dashboard",
+    date: "2024",
+    description: "A dynamic Power BI dashboard designed to track fitness activities and health metrics. It provides real-time insights into finances (revenue, expenses, profit), client memberships (active and expired statuses), and monthly membership trends.",
+    image: "https://drive.google.com/uc?id=1cgKKoUx1x0K43fCC-ijuH9A6oGIjuNKy",
+    tags: ["Power BI", "DAX", "Data Modeling", "Excel/CSV"],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/fitness-dashboard",
+  },
+  {
+    id: 24,
+    title: "Spotify Music Analytics Dashboard",
+    date: "July 2024",
+    description: "This project showcases an interactive Power BI dashboard built to explore and visualize Spotify’s global music trends. It analyzes songs by artist, album type, popularity, explicit content, and release date.",
+    image: "https://drive.google.com/uc?id=1keYJI--ummMx9-xaqOFIypKPVoHisjVP",
+    tags: ["Power BI", "DAX", "Data Modeling", "Excel/CSV"],
+    category: "data analyst",
+    github: "https://github.com/ORE0000",
+    webapp: "/visuals/spotify-music-analytics",
+  },
+  {
     id: 20,
     title: "Netflix Content Analysis Dashboard",
     date: "July 1, 2024",
     description: "A comprehensive dashboard analyzing the Netflix content library, inspired by a Tableau visualization.",
-    image: "https://drive.google.com/uc?export=view&id=111QcD9N0e8aP_tQaBSHQi5Qs1Qbc3Ge-",
+    image: "https://drive.google.com/uc?id=111QcD9N0e8aP_tQaBSHQi5Qs1Qbc3Ge-",
     tags: ['Recharts', 'Next.js', 'Tailwind CSS', 'TypeScript'],
     category: "data analyst",
     github: "https://github.com/ORE0000",
@@ -378,7 +424,7 @@ projects: [
     title: "Pratilipi Market Analysis",
     date: "June 2025",
     description: "An end-to-end market research and strategic analysis of Pratilipi, a digital storytelling platform, covering monetary growth, product features, user demographics, revenue models, market positioning, and more.",
-    image: "https://drive.google.com/uc?export=view&id=1r5oIG8jl19lyamVydVrRovErixnF7ogp",
+    image: "https://drive.google.com/uc?id=1r5oIG8jl19lyamVydVrRovErixnF7ogp",
     tags: ['Excel', 'Power BI', 'Market Research', 'Financial Analysis', 'Competitor Benchmarking'],
     category: "data analyst",
     github: "https://github.com/ORE0000",
@@ -400,22 +446,11 @@ projects: [
     title: "Airbnb Market Analysis",
     date: "May 2025",
     description: "Conducted an in-depth analysis of Airbnb listings, utilizing SQL for data extraction and Python for cleaning. Designed an interactive Tableau dashboard to visualize key metrics like price distribution, occupancy rates, and host activity, enhancing data-driven decision-making.",
-    image: "https://drive.google.com/uc?export=view&id=1WYoQuUwfk6CytPQws3Oi3uE-BQe4iaI5",
+    image: "https://drive.google.com/uc?id=1WYoQuUwfk6CytPQws3Oi3uE-BQe4iaI5",
     tags: ['Tableau', 'SQL', 'Excel', 'Python', 'Pandas', 'NumPy'],
     category: "data analyst",
     github: "https://github.com/ORE0000",
     webapp: "/visuals/airbnb-market-analysis",
-  },
-  {
-    id: 24,
-    title: "Power BI Sales Dashboard",
-    date: "July 2025",
-    description: "An interactive dashboard analyzing quarterly sales performance across multiple regions and product categories.",
-    image: "https://placehold.co/800x600.png",
-    tags: ['Power BI', 'SQL', 'Python', 'Matplotlib', 'Seaborn'],
-    category: "data analyst",
-    github: "https://github.com/ORE0000",
-    webapp: "/visuals/power-bi-sales-dashboard",
   },
   {
     id: 25,
@@ -444,7 +479,7 @@ projects: [
     title: "HOSS - Hotel Management System",
     date: "2024",
     description: "A full-featured hotel management system built for Hotel Om Shiv Shankar, offering booking operations, financial insights, and multi-property support—all wrapped in a sleek and modern UI.",
-    image: "https://drive.google.com/uc?export=view&id=1FNpSJFrJjhUPuXNTWVQTmEagYWVyCHmy",
+    image: "https://drive.google.com/uc?id=1FNpSJFrJjhUPuXNTWVQTmEagYWVyCHmy",
     tags: ["React", "TypeScript", "Vite", "Express", "TailwindCSS", "Framer Motion"],
     category: "web app",
     github: "https://github.com/ORE0000",
@@ -455,7 +490,7 @@ projects: [
     title: "Hotel Booking Website – Hotel Om Shiv Shankar",
     date: "2023",
     description: "A full-featured hotel booking website built using PHP, MySQL, AJAX, and HTML/CSS/JavaScript for a seamless experience across users and administrators. Designed for Hotel Om Shiv Shankar, it includes features like real-time availability, profile management, secure bookings, and admin control panels.",
-    image: "https://drive.google.com/uc?export=view&id=1UB6P3D7VUaRll_sTmzu0aT0C5R_e4bzE",
+    image: "https://drive.google.com/uc?id=1UB6P3D7VUaRll_sTmzu0aT0C5R_e4bzE",
     tags: ["PHP", "MySQL", "AJAX", "HTML", "CSS", "JavaScript", "Bootstrap"],
     category: "web app",
     github: "https://github.com/ORE0000/HOSS",
@@ -532,7 +567,7 @@ projects: [
     date: "2023",
     description:
       "A modern banking application that provides secure financial services, transaction management, and account operations for users.",
-    image: "https://github.com/ORE0000/UBN-BANKING/raw/master/screenshot.png",
+    image: "https://drive.google.com/uc?id=1C3ZtJwl_y4wPCpi-zHibvZNvtBC0M733",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
     category: "web app",
     github: "https://github.com/ORE0000/UBN-BANKING.git",
@@ -577,16 +612,110 @@ projects: [
     webapp: "https://github.com/ORE0000",
   },
 ] as Project[],
+certificates: [
+  {
+    id: 1,
+    title: "Certificate of Training on Core Java",
+    issuedBy: "Internshala Trainings",
+    date: "September 15, 2025",
+    image: "https://drive.google.com/uc?id=1BjkWq_9Gu6dhyEDtkk_sDxqkQ4KlcXGq",
+    credentialLink: "https://trainings.internshala.com/s/v/2261183/6c656333",
+  },
+  {
+    id: 2,
+    title: "Full-Stack Web Development",
+    issuedBy: "YHHills",
+    date: "June 1, 2024",
+    image: "https://drive.google.com/uc?id=19J8H3xXXbqjqtHx7DQfnj5NvG33xoNwt",
+    credentialLink: "#",
+  },
+  {
+    id: 3,
+    title: "Research Methodology",
+    issuedBy: "NPTEL",
+    date: "October 2023",
+    image: "https://drive.google.com/uc?id=1yPgCZz12TNewTzvH02Z8LWUeEs7Lw_ti",
+    credentialLink: "#",
+  },
+  {
+    id: 4,
+    title: "Data Analysis with Python",
+    issuedBy: "DataCamp",
+    date: "2024",
+    image: "https://placehold.co/800x600.png",
+    credentialLink: "#",
+  },
+  {
+    id: 5,
+    title: "Advanced Data Analytics",
+    issuedBy: "Coursera",
+    date: "2025",
+    image: "https://placehold.co/800x600.png",
+    credentialLink: "#",
+  },
+] as Certificate[],
 };
 
+
 export const visuals: Visual[] = [
+{
+  slug: 'spotify-music-analytics',
+  title: 'Spotify Music Analytics Dashboard',
+  shortDescription: 'An interactive Power BI dashboard exploring global music trends on Spotify.',
+  longDescription: 'This project showcases an interactive Power BI dashboard built to explore and visualize Spotify’s global music trends. It analyzes songs by artist, album type, popularity, explicit content, and release date.',
+  iconName: 'BarChart',
+  image: 'https://drive.google.com/uc?id=1keYJI--ummMx9-xaqOFIypKPVoHisjVP',
+  hint: 'music analytics dashboard',
+  component: 'SpotifyDashboard',
+  tools: ['Power BI', 'DAX', 'Data Modeling', 'Excel/CSV'],
+  achievements: [
+    'Interactive analysis of songs by artist, album type, and month.',
+    'Popularity and duration correlation insights.',
+    'Explicit vs. Non-explicit content breakdown.',
+    'Dynamic filters and navigation for a seamless user experience.'
+  ]
+},
+{
+  slug: 'bank-loan-analytics',
+  title: 'Bank Loan Analytics Dashboard',
+  shortDescription: 'An end-to-end analysis of a financial institution’s loan dataset using SQL and Power BI.',
+  longDescription: 'This project demonstrates end-to-end data analysis and visualization using SQL Server and Microsoft Power BI. The goal was to analyze a financial institution’s loan dataset to uncover insights into loan performance, borrower behavior, and portfolio health. The interactive Power BI dashboard provides real-time, dynamic exploration of financial metrics.',
+  iconName: 'BarChart',
+  image: 'https://drive.google.com/uc?id=1C3ZtJwl_y4wPCpi-zHibvZNvtBC0M733',
+  hint: 'finance dashboard analytics',
+  component: 'BankLoanAnalyticsDashboard',
+  tools: ['SQL Server', 'Power BI', 'DAX', 'Data Modeling'],
+  achievements: [
+    'Calculated KPIs like Total, Good, and Bad Loan Applications.',
+    'Analyzed Month-over-Month (MoM) Loan Trends.',
+    'Visualized breakdowns by region, term, and purpose.',
+    'Built an interactive dashboard for real-time data exploration.'
+  ]
+},
+{
+  slug: 'fitness-dashboard',
+  title: 'Fitness Dashboard',
+  shortDescription: 'A dynamic Power BI dashboard to track fitness activities and health metrics.',
+  longDescription: 'A dynamic Power BI dashboard designed to track fitness activities and health metrics. It provides real-time insights into finances (revenue, expenses, profit), client memberships (active and expired statuses), and monthly membership trends.',
+  iconName: 'BarChart',
+  image: 'https://drive.google.com/uc?id=1cgKKoUx1x0K43fCC-ijuH9A6oGIjuNKy',
+  hint: 'fitness gym data',
+  component: 'FitnessDashboard',
+  tools: ['Power BI', 'DAX', 'Data Modeling', 'Excel/CSV'],
+  achievements: [
+    'Real-time tracking of revenue, expenses, and profit.',
+    'Detailed client membership status analysis.',
+    'Interactive membership tier analysis (Platinum, Gold, Silver).',
+    'Monthly membership trend visualization.'
+  ]
+},
 {
   slug: 'netflix-dashboard',
   title: 'Netflix Content Analysis Dashboard',
   shortDescription: 'A comprehensive dashboard analyzing the Netflix content library, inspired by a Tableau visualization.',
   longDescription: 'This dashboard provides a deep dive into the Netflix content library. It includes breakdowns by country, rating, genre, and type (Movie vs. TV Show), as well as trends over time. This project showcases advanced data visualization techniques using Recharts within a Next.js application, replicating a complex Tableau dashboard.',
   iconName: 'Film',
-  image: 'https://drive.google.com/uc?export=view&id=111QcD9N0e8aP_tQaBSHQi5Qs1Qbc3Ge-',
+  image: 'https://drive.google.com/uc?id=111QcD9N0e8aP_tQaBSHQi5Qs1Qbc3Ge-',
   hint: 'netflix dashboard analytics',
   component: 'NetflixDashboard',
   tools: ['Recharts', 'Next.js', 'Tailwind CSS', 'TypeScript'],
@@ -603,7 +732,7 @@ export const visuals: Visual[] = [
   shortDescription: 'An end-to-end market research and strategic analysis of Pratilipi, a digital storytelling platform.',
   longDescription: 'This case study showcases a comprehensive market and business research on Pratilipi. The analysis covers monetary growth, product features, user demographics, revenue models, market positioning, competitive landscape, content trends, and growth strategies. The interactive dashboard visualizes key findings, including revenue breakdowns, financial performance over time, and funding trends, providing a clear picture of the company\'s challenges and opportunities.',
   iconName: 'BarChart',
-  image: 'https://drive.google.com/uc?export=view&id=1r5oIG8jl19lyamVydVrRovErixnF7ogp',
+  image: 'https://drive.google.com/uc?id=1r5oIG8jl19lyamVydVrRovErixnF7ogp',
   hint: 'market analysis dashboard',
   component: 'PratilipiMarketAnalysisChart',
   tools: ['Excel', 'Power BI', 'Market Research', 'Financial Analysis', 'Competitor Benchmarking'],
@@ -638,7 +767,7 @@ export const visuals: Visual[] = [
   shortDescription: 'A comprehensive analysis of Airbnb listings, pricing, and availability in a major metropolitan area.',
   longDescription: 'Conducted an in-depth analysis of Airbnb listings, utilizing SQL for data extraction and Python (Pandas, NumPy) for data cleaning and transformation. I designed an interactive Tableau dashboard to visualize key metrics such as price distribution, occupancy rates, and host activity, which enhanced data-driven decision-making. A significant part of this project was implementing geospatial analysis to identify pricing trends across different cities and neighborhoods. Additionally, I automated data preprocessing in Excel, reducing manual efforts by 40% and improving overall data accuracy.',
   iconName: 'MapPinned',
-  image: 'https://drive.google.com/uc?export=view&id=1WYoQuUwfk6CytPQws3Oi3uE-BQe4iaI5',
+  image: 'https://drive.google.com/uc?id=1WYoQuUwfk6CytPQws3Oi3uE-BQe4iaI5',
   hint: 'map data',
   component: 'AirbnbAnalysisChart',
   tools: ['Tableau', 'SQL', 'Excel', 'Python', 'Pandas', 'NumPy'],
