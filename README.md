@@ -52,7 +52,7 @@ Each project in this repository is designed around **practical problem-solving**
 <p align="center">
   <a href="https://ashutoshpant.netlify.app/visuals/bank-loan-analytics" target="_blank">
     <img 
-      src="https://github.com/ORE0000/BANK-LOAN-DATA-ANALYSIS/blob/main/Screenshots/Dashboard2_Overview.png?raw=true" 
+      src="https://github.com/ORE0000/Bank-Loan-Analytics-SQL-and-PowerBI/blob/main/BANK%20LOAN%20DATA%20ANALYSIS/Screenshots/Dashboard2_Overview.png" 
       alt="Bank Loan Dashboard" 
       width="70%"
     />
