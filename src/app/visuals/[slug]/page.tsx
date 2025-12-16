@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import { visuals } from '@/data/constants';
@@ -33,10 +32,17 @@ const NetflixDashboard = dynamic(() => import('@/components/charts/NetflixDashbo
     ssr: false,
     loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
 });
-const SpotifyDashboard = dynamic(() => import('@/components/charts/spotify-music-analytics'), {
-  ssr: false,
-  loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
-});
+const SpotifyDashboard = dynamic(
+  () => import("@/components/charts/spotify-music-analytics"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-screen flex items-center justify-center bg-black">
+        <p className="text-white text-lg animate-pulse">Loading Dashboard...</p>
+      </div>
+    ),
+  }
+);
 const BankLoanAnalyticsDashboard = dynamic(() => import('@/app/visuals/bank-loan-analytics/page'), {
   ssr: false,
   loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
@@ -44,6 +50,14 @@ const BankLoanAnalyticsDashboard = dynamic(() => import('@/app/visuals/bank-loan
 const FitnessDashboard = dynamic(() => import('@/app/visuals/fitness-dashboard/page'), {
   ssr: false,
   loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
+const SmartphoneMarketAnalysisDashboard = dynamic(() => import('@/app/visuals/smartphone-market-analysis/page'), {
+  ssr: false,
+  loading: () => <div className="w-full h-screen flex items-center justify-center bg-black"><p className="text-white text-lg animate-pulse">Loading Dashboard...</p></div>,
+});
+const SqlDataWarehouse = dynamic(() => import('@/app/visuals/sql-data-warehouse/page'), {
+  ssr: false,
+  loading: () => <div className="w-full h-screen flex items-center justify-center bg-background"><p className="text-foreground text-lg animate-pulse">Loading Dashboard...</p></div>,
 });
 
 
@@ -63,6 +77,12 @@ export default function VisualDetailPage() {
   }
   if (visual.component === 'FitnessDashboard') {
     return <FitnessDashboard />;
+  }
+  if (visual.component === 'SmartphoneMarketAnalysisDashboard') {
+    return <SmartphoneMarketAnalysisDashboard />;
+  }
+  if (visual.component === 'SqlDataWarehouse') {
+    return <SqlDataWarehouse />;
   }
 
   return (
