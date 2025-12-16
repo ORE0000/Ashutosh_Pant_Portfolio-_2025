@@ -1,6 +1,7 @@
+
 'use client';
 
-import { BarChart, AreaChart, PieChart, MapPinned, LucideIcon, Film } from 'lucide-react';
+import { BarChart, AreaChart, PieChart, MapPinned, LucideIcon, Film, Database, Smartphone } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -14,6 +15,8 @@ const icons: { [key: string]: LucideIcon } = {
   PieChart,
   MapPinned,
   Film,
+  Database,
+  Smartphone,
 };
 
 
