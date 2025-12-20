@@ -49,7 +49,7 @@ description:
 "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
 github: "https://github.com/ORE0000",
 resume:
-"https://drive.google.com/file/d/1d_RZYwKraTgPuFT4HAMpW-3swEkeRw8p/view?usp=sharing",
+"https://drive.google.com/file/d/1DOCZZQ309y7GUTcNE74MjcJus2G2vXZA/view?usp=sharing",
 linkedin: "https://www.linkedin.com/in/ashutosh-pant1/",
 twitter: "https://x.com/ASHUTOSHPANT19",
 insta: "https://www.instagram.com/oreeoo._______/",
@@ -271,7 +271,7 @@ skills: [
 experience: [
 {
   id: 0,
-  img: "https://firebasestorage.googleapis.com/v0/b/aetherfolio-f2f25.appspot.com/o/images%2Fziion.jpeg?alt=media&token=4f03359d-6508-4034-8c88-2d2d93b118b6",
+  img: "https://www.ziiontechnology.in/static/media/Ziion-technology-logo.4077d3297fff27a32c30.png",
   role: "Data Analyst Intern",
   company: "Ziion Technology",
   date: "July 2025 - Present",
@@ -374,10 +374,10 @@ projects: [
   title: "Smartphone Launch Intel – Market Tracker",
   date: "2024",
   description: "A self-service market intelligence dashboard built to analyze the Indian smartphone market across Amazon and Flipkart, enabling data-driven decisions for pricing strategy, demand analysis, competitive benchmarking, and product launch planning.",
-  image: "https://drive.google.com/uc?id=1d-3-G76tJd22AmmQu1p2uH65e2qY2yD3",
+  image: "https://raw.githubusercontent.com/ORE0000/smartphone-market-intelligence-sql-powerbi/refs/heads/main/Screenshots/Demand_Insights.png",
   tags: ['SQL Server', 'Power BI', 'DAX', 'Data Modeling', 'Marketplace Analytics'],
   category: "data analyst",
-  github: "https://github.com/ORE0000",
+  github: "https://github.com/ORE0000/smartphone-market-intelligence-sql-powerbi.git",
   webapp: "/visuals/smartphone-market-analysis",
 },
 {
@@ -385,7 +385,7 @@ projects: [
   title: "SQL Data Warehouse (Medallion Architecture)",
   date: "2025",
   description: "A SQL Server-based end-to-end data warehouse built using the Medallion Architecture (Bronze → Silver → Gold), handling ETL, data modeling, and analytical dataset creation for BI and self-service analytics.",
-  image: "https://drive.google.com/uc?id=1E-vM015y6EYbQYj2L9K8k_Hj9F9Z3J67",
+  image: "https://raw.githubusercontent.com/ORE0000/sql-data-warehouse/refs/heads/main/docs/High%20Level%20Architecture%20-%20Enhanced.png",
   tags: ["SQL Server", "ETL", "Data Modeling", "Medallion Architecture", "Star Schema", "T-SQL"],
   category: "data analyst",
   github: "https://github.com/ORE0000/sql-data-warehouse",
@@ -658,7 +658,7 @@ title: 'Smartphone Launch Intel – Market Tracker',
 shortDescription: 'A self-service market intelligence dashboard to analyze the Indian smartphone market across Amazon and Flipkart.',
 longDescription: 'A self-service market intelligence dashboard built to analyze the Indian smartphone market across Amazon and Flipkart, enabling data-driven decisions for pricing strategy, demand analysis, competitive benchmarking, and product launch planning.',
 iconName: 'Smartphone',
-image: 'https://drive.google.com/uc?id=1d-3-G76tJd22AmmQu1p2uH65e2qY2yD3',
+image: 'https://raw.githubusercontent.com/ORE0000/smartphone-market-intelligence-sql-powerbi/refs/heads/main/Screenshots/Demand_Insights.png',
 hint: 'smartphone market analysis',
 component: 'SmartphoneMarketAnalysisDashboard',
 tools: ['SQL Server', 'Power BI', 'DAX', 'Data Modeling', 'Marketplace Analytics'],
@@ -675,7 +675,7 @@ title: 'SQL Data Warehouse (Medallion Architecture)',
 shortDescription: 'An end-to-end data warehouse handling ETL, data modeling, and analytical dataset creation for BI.',
 longDescription: 'A SQL Server-based end-to-end data warehouse built using the Medallion Architecture (Bronze → Silver → Gold), handling ETL, data modeling, and analytical dataset creation for BI and self-service analytics.',
 iconName: 'Database',
-image: 'https://drive.google.com/uc?id=1E-vM015y6EYbQYj2L9K8k_Hj9F9Z3J67',
+image: 'https://raw.githubusercontent.com/ORE0000/sql-data-warehouse/refs/heads/main/docs/High%20Level%20Architecture%20-%20Enhanced.png',
 hint: 'data warehouse architecture',
 component: 'SqlDataWarehouse',
 tools: ["SQL Server", "ETL", "Data Modeling", "Medallion Architecture", "Star Schema", "T-SQL"],
@@ -804,23 +804,6 @@ achievements: [
     'Implemented geospatial analysis to identify pricing trends.',
     'Automated data preprocessing, reducing manual efforts by 40%.',
     'Used advanced SQL and Python for data extraction and cleaning.'
-]
-},
-{
-slug: 'power-bi-sales-dashboard',
-title: 'Power BI Sales Dashboard',
-shortDescription: 'An interactive dashboard analyzing quarterly sales performance across multiple regions and product categories.',
-longDescription: 'This project involved a deep dive into customer purchase behavior and sales trends. By leveraging complex SQL queries, I efficiently extracted and manipulated large datasets to uncover actionable insights. The core of this project was the development of an interactive Power BI dashboard, which featured real-time sales performance metrics. This tool significantly enhanced executive decision-making and boosted reporting efficiency by 30%.',
-iconName: 'BarChart',
-image: 'https://img.icons8.com/?size=100&id=38OIZPoPpQ3Q&format=png&color=000000',
-hint: 'dashboard chart',
-component: 'CustomerSalesChart',
-tools: ['Power BI', 'SQL', 'Python', 'Matplotlib', 'Seaborn'],
-achievements: [
-  'Applied data aggregation to identify top products and seasonal trends.',
-  'Identified key customer retention patterns to inform marketing strategies.',
-  'Utilized Python for advanced data visualization, enhancing report clarity.',
-  'Implemented predictive analytics to forecast sales trends for business growth.'
 ]
 },
 ];
