@@ -58,7 +58,7 @@ export default function SqlDataWarehousePage() {
               <CardContent className="p-0">
                 <div className="relative w-full bg-muted/30 rounded-lg overflow-hidden aspect-video">
                   <Image
-                    src="https://placehold.co/1200x675/1a1a1a/ffffff?text=Project+Image"
+                    src="https://raw.githubusercontent.com/ORE0000/sql-data-warehouse/refs/heads/main/docs/High%20Level%20Architecture%20-%20Enhanced.png"
                     alt="SQL Data Warehouse Architecture"
                     layout="fill"
                     objectFit="cover"
