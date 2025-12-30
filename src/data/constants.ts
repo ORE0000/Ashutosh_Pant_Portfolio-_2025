@@ -298,7 +298,7 @@ export const Bio = {
       img: "https://img.icons8.com/?size=100&id=txoP0q0H3NEb&format=png&color=000000",
       role: "SkyScope Developer",
       company: "SkyScope",
-      date: "2024 - Present",
+      date: "December 2024 - January 2025",
       desc: "Developed a weather application using ReactJS, TypeScript, TanStack Query, and ShadCN UI. Integrated third-party APIs for real-time weather updates and enhanced user experience with intuitive UI/UX design.",
       skills: [
         "ReactJS",
@@ -388,7 +388,7 @@ export const Bio = {
     {
       id: 29,
       title: "Smartphone Launch Intel – Market Tracker",
-      date: "2024",
+      date: "December 2025",
       description:
         "A self-service market intelligence dashboard built to analyze the Indian smartphone market across Amazon and Flipkart, enabling data-driven decisions for pricing strategy, demand analysis, competitive benchmarking, and product launch planning.",
       image:
@@ -408,7 +408,7 @@ export const Bio = {
     {
       id: 30,
       title: "SQL Data Warehouse (Medallion Architecture)",
-      date: "2025",
+      date: "November 2025",
       description:
         "A SQL Server-based end-to-end data warehouse built using the Medallion Architecture (Bronze → Silver → Gold), handling ETL, data modeling, and analytical dataset creation for BI and self-service analytics.",
       image:
@@ -428,7 +428,7 @@ export const Bio = {
     {
       id: 27,
       title: "Bank Loan Analytics Dashboard",
-      date: "2024",
+      date: "September 2025",
       description:
         "This project demonstrates end-to-end data analysis and visualization using SQL Server and Microsoft Power BI. The goal was to analyze a financial institution’s loan dataset to uncover insights into loan performance, borrower behavior, and portfolio health.",
       image: "https://drive.google.com/uc?id=1C3ZtJwl_y4wPCpi-zHibvZNvtBC0M733",
